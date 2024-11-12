@@ -45,7 +45,7 @@ const addWordToDom = (length) => {
   //generate random index between 0 and length
   const randomIndex = Math.floor(Math.random() * length);
 
-  //randomWord is thr word related to the randomIndex
+  //randomWord is the word related to the randomIndex
   const randomWord = words[randomIndex];
 
   //randomWord is passed to h1 element
@@ -124,6 +124,8 @@ const updateTime = () => {
   if(timeDisplayed === 0){
     clearInterval(stopCountdown);
     alert("Game Over");
+    //input disabled
+    input.disabled = true;
   }
 }
 const stopCountdown = setInterval(updateTime, 1000)
